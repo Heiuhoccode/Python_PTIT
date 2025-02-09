@@ -6,10 +6,8 @@ for i in range(test):
         print(number)
     else:
         newNumber = ""
-        arr = number.split()
-        print(arr)
+        temp = int(number[len(number)-1])
         for i in range(len(number)-1):
-            temp = int(number[len(number)-1-i])
 
             temp1 = int(number[len(number) - 2 - i])
             if(temp >= 5):
@@ -17,8 +15,12 @@ for i in range(test):
             temp = 0
             newNumber = newNumber[1:]
             newNumber = str(temp) + newNumber
-            newNumber = str(temp1) + newNumber
-            print(newNumber)
+            if(temp1==10 and i!=len(number)-2):
+                newNumber = str(0) + newNumber
+            else:
+                newNumber = str(temp1) + newNumber
+            temp = temp1
+        print(newNumber)
 
 
 """
@@ -30,4 +32,5 @@ for i in range(test):
 12345678
 44444445
 1445
+
 """
