@@ -6,8 +6,10 @@ def check(arr):
             return "NO"
     return "YES"
 for t in range(int(input())):
-    arr = list(map(int, input().split(".")))
-    print(check(arr))
+    try:
+        arr = list(map(int, input().strip().split(".")))
+        print(check(arr))
+    except: print("NO")
 # 2
 # 192.168.1.1
 # 256.255.255.255
