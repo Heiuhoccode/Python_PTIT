@@ -1,0 +1,6 @@
+n = int(input())
+arr = sorted(list(map(int,input().strip().split())))
+temp = max(arr[-1]*arr[-2], arr[-1]*arr[-2]*arr[-3])
+temp1 = max(temp, arr[0]*arr[1])
+temp2 = max(temp1, arr[0]*arr[1]*arr[-1])
+print(temp2)
