@@ -26,7 +26,7 @@ for _ in range(int(input())):
     AB = A.distance(B)
     BC = B.distance(C)
     AC = A.distance(C)
-    if AB + BC <= AC or AB + AC <= BC or AC + BC <= AB:
+    if AB + BC <= AC or AB + AC <= BC or AC + BC <= AB or AB <= 0 or BC <= 0 or AC <= 0:
         print("INVALID")
     else:
         triangle = Triangle(AB,BC,AC)

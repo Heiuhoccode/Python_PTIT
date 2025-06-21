@@ -1,6 +1,4 @@
 import math
-
-
 def process(u):
     sum = 0
     for i in range(2, int(math.sqrt(u))+1):
